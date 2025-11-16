@@ -48,10 +48,13 @@ int main() {
 
     for (auto &p : magazzino) {
         cout << "\n--- " << p.nome << " ---" << endl;
+        cout << "Prezzo di acquisto: EUR " << p.prezzoAcquisto << endl;
+        cout << "Prezzo di vendita: EUR " << p.prezzoVendita << endl;
         cout << "IVA (22%): EUR " << p.getIVA() << endl;
         cout << "Prezzo con IVA: EUR " << p.getPrezzoConIVA() << endl;
         cout << "Margine unitario: EUR " << p.getMargineUnitario() << endl;
-        cout << "Valore totale magazzino: EUR " << p.getValoreTotaleStock() << endl;
+        cout << "Quantita magazzino: " << p.quantita << endl;
+        cout << "Valore magazzino: EUR " << p.getValoreTotaleStock() << endl;
 
         valoreTot += p.getValoreTotaleStock();
         if (p.daRiordinare()) {
@@ -67,4 +70,5 @@ int main() {
 
     cout << "\nPremi Invio per uscire...";
     cin.get();
+    return 0;
 }
